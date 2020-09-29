@@ -12,17 +12,16 @@ func factorial(numero float64) float64 {
 }
 
 func main() {
-	n := 100.0
-	i := 3.0
-	suma1 := 2.0
-	suma2 := suma1 + (1 / factorial(2))
+	var n float64
+	var i float64 = 1.0
+	var suma float64 = 1.0
+
+	fmt.Scanln(&n)
 
 	for i <= n {
-		suma1 = suma2
-		suma2 += 1 / factorial(i)
-		fmt.Println("Suma: ", suma2)
+		suma += 1 / factorial(i)
 		i++
 	}
 
-	fmt.Println("Aproximacion de Euler: ", suma2)
+	fmt.Println(suma)
 }
